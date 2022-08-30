@@ -5,6 +5,7 @@ type ReleaseManifest struct {
 	ProductName    string       `mapstructure:"product-name"`
 	ProductVersion string       `mapstructure:"product-version"`
 	ReleaseChannel string       `mapstructure:"release-channel"`
+	HelmChart      string       `mapstructure:"helm-chart"`
 	Dependencies   []Dependency `mapstructure:"dependencies"`
 }
 

@@ -17,6 +17,10 @@ func Apply(host string, manifests []map[string]any) {
 				man := api.ReleaseManifest{}
 				mapstructure.Decode(manifest, &man)
 				CreateRelease(host, man)
+			case "app":
+				man := api.AppManifest{}
+				mapstructure.Decode(manifest, &man)
+				CreateApp(host, man)
 			}
 		}
 	}
